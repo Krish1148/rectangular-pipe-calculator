@@ -50,8 +50,8 @@
             <input type="number" id="thickness" value="3.2" step="any" oninput="calculate()">
         </div>
         <div class="form-group">
-            <label for="length">Length (meters)</label>
-            <input type="number" id="length" value="6" step="any" oninput="calculate()">
+            <label for="length">Length (mm)</label>
+            <input type="number" id="length" value="6000" step="any" oninput="calculate()">
         </div>
     </div>
 
@@ -93,7 +93,7 @@
         const W = w_raw * toCm;
         const H = h_raw * toCm;
         const t = t_raw * toCm;
-        const L = len_meters * 100;
+        const L = len_meters * 0.1;
 
         let volume = 0;
         const w = W - (2 * t);
